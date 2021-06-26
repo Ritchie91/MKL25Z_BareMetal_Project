@@ -1,0 +1,56 @@
+/*** Configuración de la Kinetis KL25Z ***/
+
+1. Bajar los drivers de la siguiente liga: 
+
+http://www.pemicro.com/opensda/
+
+Después ir apartado Windows USB Drivers y dar click donde dice PEDrivers_install.exe
+y abrir sesión. Una vez hecho esto se comenzara con la descarga.
+
+2. Ejecutar el archivo ejecutable (los drivers).
+
+3. Una vez que tenemos instalados los drivers ya es posible conectar la kinetis
+   a la PC.
+
+4. Volvemos a la página  pemicro para descargar el firmware y en
+   el apartado OpenSDA Firmware (MSD & Debug) damos click en el enlace 
+   Firmware Apps (el OpenSDA es un adaptador serial que conecta la PC y el 
+   microcontrolador para flashearlo y debuguearlo). Y descargamos el archivo.
+
+5. Conectamos la kinetis (en el puerto que dice OpenSDA) a la PC. 
+
+6. Una vez descargado el firmware abrimos el archivo comprimido (veremos
+   muchos archivos binarios y ficheros con los diferentes firmwares) buscamos
+   el que le pertenece a la KL25Z.
+
+7. Si la tarjeta es nueva hay que actualizar el bootloader (abrimos el bloc 
+   de notas con las instrucciones dentro del comprimido).
+
+8. Cuando se conecta el dispositivo se vera como si fuera conectada una USB.
+
+9. Para entrar en modo bootloader, desconectamos la tarjeta y la reconectamos
+   presionando al mismo tiempo el boton reset y mantenerlo presionado.
+
+10. Arrastrar el archivo BOOTUPDATEAPP.SDA que se encuentra, en nuestros
+    firmwares que acabamos de descargar, dentro de la carpeta rar que esta adentro
+    lo agarramos y arrastramos a BOOTLOADER(D:)
+
+11. Para que se actualice el bootloader, desconectamos la tarjeta, reconectamos
+    otra vez presionando el boton reset.
+
+12. Para verificar que lo hicimos bien, daremos click en el HTML que dice 
+    SDA_INFO y nos redireccionara a la pagina de pemicro dandonos la version
+    1.11 .
+
+13. Ahora seleccionamos el firmware adecuado para nuestra kl25z, tomamos y arrastramos
+    el archivo a BOOTLOADER(D:), desconectamos y volvemos a conectar sin hacer
+    el reset.
+
+14. Para verificar la actualizacion y meternos a SDA_INFO y nos mandara a la
+    pagina pemicro y nos dara la version de la aplicacion 1.18 . La tarjeta 
+    esta actualizada.
+
+
+
+
+
