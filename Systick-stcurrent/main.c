@@ -1,10 +1,12 @@
 /* p5_1.c Toggling LEDs using SysTick counter
 
-This program let the Systick counter run freely and dumps the counter values to the tri-color LEDs continuously.
-The counter value is shifted 4 places to the right so that the changes of LEDs will be slow enough to be visible.
-SysTick counter has 24 bits.
-The red LED is connected to PTB18.
-The green LED is connected to PTB19.
+* This program let the Systick counter run freely and dumps the counter values 
+  to the tri-color LEDs continuously.
+* The counter value is shifted 4 places to the right so that the changes of LEDs 
+  will be slow enough to be visible.
+* SysTick counter has 24 bits.
+* The red LED is connected to PTB18.
+* The green LED is connected to PTB19.
 */
 
 #include "MKL25Z4.h"                    // Device header

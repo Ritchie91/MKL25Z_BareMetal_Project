@@ -20,7 +20,7 @@ int main()
 	
 	while(1)
 	{
-		SysTickDelayMs(50);
+		SysTickDelayMs(1000);
 		PTB -> PTOR = 0x080000;
 	}
 	
@@ -31,7 +31,7 @@ int main()
 void SysTickDelayMs(int delay)
 {
 	int i;
-	SysTick -> LOAD = 41940 -1; // Because systick clock is running at 41.94MHz
+	SysTick -> LOAD = 20972 -1; // Because systick clock is running at 20971520 Hz 
   SysTick -> CTRL = 0x5;
 	for(i = 0; i < delay; i++)
 	{
